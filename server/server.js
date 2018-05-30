@@ -14,19 +14,19 @@ app.use(express.static(publicPath));
 io.on('connection', (socket) => {
   console.log('New user connected');
 
-  socket.emit('newEmail', {
-    from: 'simon@gmail.com',
-    text: 'Yo what\'s up?',
-    createdAt: 123
-  });
+  socket.emit('newMessage', {
+    from: 'Simon',
+    text: 'What do you want for dinner?',
+    createdAt: 321
+  })
 
   socket.on('disconnect', () => {
     console.log('User was disconnected.');
   });
 
-  socket.on('createEmail', (newEmail) => {
-    console.log('createEmail', newEmail);
-  });
+  socket.on('createMessage', (newMessage) => {
+    console.log('createMessage', newMessage);
+  })
 });
 
 server.listen(port, () => {
