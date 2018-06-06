@@ -17,7 +17,6 @@ socket.on('newMessage', function(message) {
   jQuery('#messages').append(li);
 });
 
-
 socket.on('newLocationMessage', function(message) {
   const formattedTime = moment(message.createdAt).format('h:mm a');
   const li = jQuery('<li></li>');
