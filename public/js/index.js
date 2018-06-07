@@ -28,7 +28,6 @@ socket.on('newLocationMessage', function(message) {
   jQuery('#messages').append(li);
 });
 
-
 jQuery('#message-form').on('submit', function(e) {
   e.preventDefault();
 
