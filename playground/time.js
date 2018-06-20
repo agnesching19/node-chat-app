@@ -3,7 +3,6 @@ const moment = require('moment');
 // const date = new Date();
 // console.log(date.getDate());
 
-
 const someTimeStamp = moment().valueOf();
 console.log(someTimeStamp);
 
