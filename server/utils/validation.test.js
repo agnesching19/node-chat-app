@@ -17,3 +17,4 @@ describe('isRealString', () => {
     expect(res).toBe(true);
   });
 });
+
